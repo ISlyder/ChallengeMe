@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
@@ -25,12 +26,18 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     @Override
-    public Optional<Player> findById(Long playerId) {
-        return playerDao.findById(playerId);
+    public Player findById(Long playerId) {
+        return playerDao.findById(playerId)
+                .orElseThrow(() -> new NoSuchElementException(String.format("No player with id %d", playerId)));
     }
 
     @Override
     public void create(Player p) {
         playerDao.save(p);
+    }
+
+    @Override
+    public void delete(long id) {
+        playerDao.deleteById(id);
     }
 }

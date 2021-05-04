@@ -25,15 +25,20 @@ public class PlayerApi {
     }
 
     @GetMapping(value = "/{id}")
-    public Optional<Player> getPlayer(@PathVariable long id) {
+    public Player getPlayer(@PathVariable long id) {
         return playerService.findById(id);
     }
 
     @PostMapping
     public void createPlayer(@RequestBody Player p) {
-        if(p.getId() != null ) {
+        if (p.getId() != null) {
             throw new IllegalArgumentException("Cannot create a player with an id !");
         }
         playerService.create(p);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletePlayer(@PathVariable long id) {
+        playerService.delete(id);
     }
 }

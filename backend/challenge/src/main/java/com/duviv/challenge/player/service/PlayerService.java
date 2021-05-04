@@ -9,8 +9,9 @@ public interface PlayerService {
 
     List<Player> findAll();
 
-    Optional<Player> findById(Long playerId);
+    Player findById(Long playerId);
 
     void create(Player p);
 
+    void delete(long id);
 }
