@@ -1,0 +1,28 @@
+.flags-container {
+  position: relative;
+  display: block;
+}
+
+.flag-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flag-component {
+  display: contents;
+}
+
+img {
+  width: auto;
+  height: 50px;
+  margin: 5px;
+}
+
+.check-container {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border-bottom: solid 1px;
+  text-align: center;
+  font-size: 25px;
+}
