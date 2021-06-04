@@ -11,7 +11,14 @@ import { Country } from '../models/country';
 export class FlagGameComponent implements OnInit {
   countries: Country[];
   displayedCountries: Country[];
-  continents: string[] = ['Asia', 'Africa', 'Americas', 'Europe', 'Oceania'];
+  continents: string[] = [
+    'All',
+    'Asia',
+    'Africa',
+    'Americas',
+    'Europe',
+    'Oceania',
+  ];
 
   constructor(private _route: ActivatedRoute) {}
 
@@ -24,9 +31,13 @@ export class FlagGameComponent implements OnInit {
 
   checkValue(event) {
     if (event.target.checked) {
-      this.displayedCountries = this.countries.filter(
-        (e) => e.region == event.target.value
-      );
+      if (event.target.value == 'All') {
+        this.displayedCountries = this.countries;
+      } else {
+        this.displayedCountries = this.countries.filter(
+          (e) => e.region == event.target.value
+        );
+      }
     } else {
       this.displayedCountries = this.countries;
     }

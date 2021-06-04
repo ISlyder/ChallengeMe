@@ -8,7 +8,7 @@
       <input
         class="form-check-input"
         type="radio"
-        name="radio"
+        name="region"
         value="{{ continent }}"
         (change)="checkValue($event)"
       />
@@ -19,8 +19,16 @@
 
 <h2 class="text-center">{{ displayedCountries.length }} pays</h2>
 
-<div class="flags-container">
-  <div class="flag-component" *ngFor="let c of displayedCountries">
+<div class="d-flex flex-wrap align-items-center justify-content-center">
+  <div *ngFor="let c of displayedCountries" class="flag-container m-3">
     <img src="{{ c.flag }}" alt="flag" />
+    <div class="text-white name-container">
+      <p class="mb-0">
+        {{ c.name.length > 25 ? (c.name | slice: 0:15) : c.name }}
+      </p>
+      <p class="mb-0 fst-italic">
+        {{ c.capital.length > 25 ? (c.capital | slice: 0:15) : c.capital }}
+      </p>
+    </div>
   </div>
 </div>

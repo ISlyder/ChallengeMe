@@ -22,7 +22,7 @@
     "@angular/router": "~11.2.12",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@popperjs/core": "^2.9.2",
-    "bootstrap": "^5.0.0-beta3",
+    "bootstrap": "^5.0.0",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

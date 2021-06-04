@@ -1,21 +1,9 @@
-.flags-container {
-  position: relative;
-  display: block;
-}
-
-.flag-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.flag-component {
-  display: contents;
-}
+@import "../../bootstrap/bootstrap";
 
 img {
-  width: auto;
-  height: 50px;
-  margin: 5px;
+  width: 250px;
+  height: 150px;
+  margin: 0px;
 }
 
 .check-container {
@@ -25,4 +13,14 @@ img {
   border-bottom: solid 1px;
   text-align: center;
   font-size: 25px;
+}
+
+.flag-container {
+  background-color: $tertiary;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.name-container {
+  padding-left: 20px;
 }
