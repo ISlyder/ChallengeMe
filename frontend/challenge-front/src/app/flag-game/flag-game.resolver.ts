@@ -1,20 +1,17 @@
-import { Injectable } from '@angular/core';
-import {
-  Router,
-  Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot,
-} from '@angular/router';
-import { Observable, of } from 'rxjs';
-import { Country } from '../models/country';
-import { FlagGameService } from './flag-game.service';
+import {Injectable} from '@angular/core';
+import {Resolve,} from '@angular/router';
+import {Observable} from 'rxjs';
+import {Country} from '../models/country';
+import {FlagGameService} from '../service/flag-game.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FlagGameResolver implements Resolve<Country[]> {
-  constructor(private _countriesApi: FlagGameService) {}
+  constructor(private countryApi: FlagGameService) {
+  }
+
   resolve(): Observable<Country[]> {
-    return this._countriesApi.getAllCountries();
+    return this.countryApi.getAllCountries();
   }
 }

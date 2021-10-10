@@ -9,7 +9,7 @@ import lombok.*;
 @Builder
 public class Country {
     private String name;
-    private String capitalCity;
+    private String capital;
     private String flag;
     private Continent continent;
 }

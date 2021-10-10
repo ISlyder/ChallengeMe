@@ -1,35 +1,27 @@
-package com.duviv.challenge.country.repository;
+package com.duviv.challenge.country.service;
 
 import com.duviv.challenge.country.model.Continent;
 import com.duviv.challenge.country.model.CountriesList;
 import com.duviv.challenge.country.model.Country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 @Component
-public class CountryRepository {
+public class CountryService {
 
-    private List<Country> countries;
+    private final List<Country> countries;
 
     @Autowired
-    public CountryRepository() {
+    public CountryService() {
          countries = new ArrayList<>();
          for(CountriesList c : CountriesList.values()) {
              countries.add(c.getCountry());
          }
-    }
-
-    public Country getCountryByFrenchName(String name) {
-        return this.countries.stream()
-                .filter(country -> country.getFlag().equalsIgnoreCase(name))
-                .findFirst().orElseThrow(() -> new NoSuchElementException("No country with name " + name));
     }
 
     public Country getCountryByName(String name) {

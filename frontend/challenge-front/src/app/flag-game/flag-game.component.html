@@ -21,13 +21,14 @@
 
 <div class="d-flex flex-wrap align-items-center justify-content-center">
   <div *ngFor="let c of displayedCountries" class="flag-container m-3">
-    <img src="{{ c.flag }}" alt="flag" />
+    <img src="{{ c.flag }}" alt="flag"/>
     <div class="text-white name-container">
       <p class="mb-0">
-        {{ c.name.length > 25 ? (c.name | slice: 0:15) : c.name }}
+        {{ 'COUNTRY.' + c.name | translate }}
       </p>
       <p class="mb-0 fst-italic">
-        {{ c.capital.length > 25 ? (c.capital | slice: 0:15) : c.capital }}
+        <!--{{ c.capital.length > 25 ? (c.capital | slice: 0:15) : c.capital }}-->
+        capital
       </p>
     </div>
   </div>

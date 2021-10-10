@@ -1,9 +1,6 @@
 export interface Country {
   name: string;
   capital: string;
-  region: string;
-  subregion: string;
-  latlng: number[];
-  area: number;
+  continent: string;
   flag: string;
 }

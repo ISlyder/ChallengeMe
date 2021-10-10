@@ -13,29 +13,29 @@ export class FlagGameComponent implements OnInit {
   displayedCountries: Country[];
   continents: string[] = [
     'All',
-    'Asia',
-    'Africa',
-    'Americas',
+    'Asie',
+    'Afrique',
+    'Amerique',
     'Europe',
-    'Oceania',
+    'Oceanie',
   ];
 
-  constructor(private _route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this._route.data
+    this.route.data
       .pipe(map((data) => data.countries))
       .subscribe((countries) => (this.countries = countries));
     this.displayedCountries = this.countries;
   }
 
-  checkValue(event) {
+  checkValue(event): void {
     if (event.target.checked) {
-      if (event.target.value == 'All') {
+      if (event.target.value === 'All') {
         this.displayedCountries = this.countries;
       } else {
         this.displayedCountries = this.countries.filter(
-          (e) => e.region == event.target.value
+          (e) => e.continent === event.target.value.toUpperCase()
         );
       }
     } else {
