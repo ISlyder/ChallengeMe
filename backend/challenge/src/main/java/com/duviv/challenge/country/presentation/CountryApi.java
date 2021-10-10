@@ -1,5 +1,6 @@
 package com.duviv.challenge.country.presentation;
 
+import com.duviv.challenge.country.model.Continent;
 import com.duviv.challenge.country.service.CountryService;
 import com.duviv.challenge.country.model.Country;
 import org.springframework.web.bind.annotation.*;
@@ -11,20 +12,25 @@ import java.util.List;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CountryApi {
 
-    private final CountryService countriesList;
+    private final CountryService countryService;
 
-    public CountryApi(CountryService countriesList) {
-        this.countriesList = countriesList;
+    public CountryApi(CountryService countryService) {
+        this.countryService = countryService;
     }
 
     @GetMapping
     public List<Country> getCountries() {
-        return countriesList.getAll();
+        return countryService.getAll();
     }
 
     @GetMapping("/{name}")
     public Country getCountry(@PathVariable String name) {
-        return countriesList.getCountryByName(name);
+        return countryService.getCountryByName(name);
+    }
+
+    @GetMapping("/{continent}")
+    public List<Country> getCountriesByContinent(@PathVariable Continent continent) {
+        return countryService.getCountriesByContinent(continent);
     }
 
 }

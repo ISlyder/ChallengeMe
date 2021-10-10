@@ -18,10 +18,10 @@ public class CountryService {
 
     @Autowired
     public CountryService() {
-         countries = new ArrayList<>();
-         for(CountriesList c : CountriesList.values()) {
-             countries.add(c.getCountry());
-         }
+        countries = new ArrayList<>();
+        for (CountriesList c : CountriesList.values()) {
+            countries.add(c.getCountry());
+        }
     }
 
     public Country getCountryByName(String name) {
@@ -36,7 +36,7 @@ public class CountryService {
 
     public List<Country> getCountriesByContinent(Continent continent) {
         return this.countries.stream()
-                .filter(country -> country.getContinent().toString().equals(continent.toString()))
+                .filter(country -> country.getContinent().equals(continent))
                 .collect(Collectors.toList());
     }
 
