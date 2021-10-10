@@ -5,7 +5,7 @@ public enum CountriesList {
     BE(new Country("Belgium", "", "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_Belgium_%28civil%29.svg?uselang=fr", Continent.EUROPE)),
     BF(new Country("Burkina Faso", "", "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg?uselang=fr", Continent.AFRIQUE)),
     BG(new Country("Bulgaria", "", "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg?uselang=frs", Continent.EUROPE)),
-    BA(new Country("Bosniaa and Herzegovina", "", "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg", Continent.EUROPE)),
+    BA(new Country("Bosnia and Herzegovina", "", "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg", Continent.EUROPE)),
     BB(new Country("Barbados", "", "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Barbados.svg?uselang=fr", Continent.AMERIQUE)),
     BN(new Country("Brunei", "", "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Brunei.svg?uselang=fr", Continent.ASIE)),
     BO(new Country("Bolivia", "", "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia.svg?uselang=fr", Continent.AMERIQUE)),
