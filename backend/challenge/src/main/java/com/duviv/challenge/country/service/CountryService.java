@@ -31,12 +31,14 @@ public class CountryService {
     }
 
     public List<Country> getAll() {
-        return this.countries;
+        return this.countries.stream()
+                .sorted()
+                .collect(Collectors.toList());
     }
 
-    public List<Country> getCountriesByContinent(Continent continent) {
+    public List<Country> getCountriesByContinent(String continent) {
         return this.countries.stream()
-                .filter(country -> country.getContinent().equals(continent))
+                .filter(country -> country.getContinent().getName().equals(continent))
                 .collect(Collectors.toList());
     }
 

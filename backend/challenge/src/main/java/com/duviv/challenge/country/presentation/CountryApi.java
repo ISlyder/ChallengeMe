@@ -28,8 +28,8 @@ public class CountryApi {
         return countryService.getCountryByName(name);
     }
 
-    @GetMapping("/{continent}")
-    public List<Country> getCountriesByContinent(@PathVariable Continent continent) {
+    @GetMapping("/continent/{continent}")
+    public List<Country> getCountriesByContinent(@PathVariable String continent) {
         return countryService.getCountriesByContinent(continent);
     }
 
