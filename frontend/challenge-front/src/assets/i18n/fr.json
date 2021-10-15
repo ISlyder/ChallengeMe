@@ -1,4 +1,10 @@
 {
+  "COMMON": {
+    "FLAGS": "Drapeaux",
+    "FLAGS_DESCRIPTION": "Apprends tous ces drapeaux et ose me challenger !",
+    "TRAINING": "Entrainement",
+    "TRAINING_DESCRIPTION": "Passe ta souris sur un drapeau pour découvrir le pays !"
+  },
   "COUNTRY": {
     "Bangladesh": "Bangladesh",
     "Belgium": "Belgique",

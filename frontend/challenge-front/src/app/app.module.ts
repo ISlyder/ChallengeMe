@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {FlagTrainingComponent} from './flag-training/flag-training.component';
+import { FlagComponent } from './flag/flag.component';
 
 export  function  HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -24,6 +26,8 @@ export  function  HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     FooterComponent,
     NotfoundComponent,
     FlagGameComponent,
+    FlagTrainingComponent,
+    FlagComponent
   ],
     imports: [
         BrowserModule,
