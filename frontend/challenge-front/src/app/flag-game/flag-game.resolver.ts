@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Resolve,} from '@angular/router';
+import {Resolve} from '@angular/router';
 import {Observable} from 'rxjs';
 import {Country} from '../models/country';
 import {FlagGameService} from '../service/flag-game.service';
