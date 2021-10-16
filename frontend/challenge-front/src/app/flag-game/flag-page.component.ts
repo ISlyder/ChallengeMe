@@ -5,10 +5,10 @@ import { Country } from '../models/country';
 
 @Component({
   selector: 'chal-flag-game',
-  templateUrl: './flag-game.component.html',
-  styleUrls: ['./flag-game.component.scss'],
+  templateUrl: './flag-page.component.html',
+  styleUrls: ['./flag-page.component.scss'],
 })
-export class FlagGameComponent implements OnInit {
+export class FlagPageComponent implements OnInit {
   countries: Country[];
   displayedCountries: Country[];
   continents: string[] = [

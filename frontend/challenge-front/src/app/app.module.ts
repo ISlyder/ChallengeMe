@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './ui/navbar/navbar.component';
 import { FooterComponent } from './ui/footer/footer.component';
 import { NotfoundComponent } from './utils/notfound/notfound.component';
-import { FlagGameComponent } from './flag-game/flag-game.component';
+import { FlagPageComponent } from './flag-game/flag-page.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -25,7 +25,7 @@ export  function  HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     NavbarComponent,
     FooterComponent,
     NotfoundComponent,
-    FlagGameComponent,
+    FlagPageComponent,
     FlagTrainingComponent,
     FlagComponent
   ],

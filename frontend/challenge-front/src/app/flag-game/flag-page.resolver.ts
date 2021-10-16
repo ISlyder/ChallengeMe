@@ -7,7 +7,7 @@ import {FlagGameService} from '../service/flag-game.service';
 @Injectable({
   providedIn: 'root',
 })
-export class FlagGameResolver implements Resolve<Country[]> {
+export class FlagPageResolver implements Resolve<Country[]> {
   constructor(private countryApi: FlagGameService) {
   }
 

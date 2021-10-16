@@ -1,13 +1,13 @@
 import { Route } from '@angular/router';
-import { FlagGameComponent } from '../flag-game/flag-game.component';
-import { FlagGameResolver } from '../flag-game/flag-game.resolver';
+import { FlagPageComponent } from '../flag-game/flag-page.component';
+import { FlagPageResolver } from '../flag-game/flag-page.resolver';
 
 export const FLAGS_ROUTES: Route[] = [
   {
     path: 'flags',
-    component: FlagGameComponent,
+    component: FlagPageComponent,
     resolve: {
-      countries: FlagGameResolver,
+      countries: FlagPageResolver,
     },
   },
 ];
