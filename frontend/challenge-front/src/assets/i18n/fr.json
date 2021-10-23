@@ -7,6 +7,9 @@
     "FLAG_GAME": "Challenge",
     "CHALLENGE_DESCRIPTION": "Tape le nom du drapeau dans le champs ci-dessous 😍"
   },
+  "FLAG_GAME": {
+    "INPUT_LABEL": "Ta réponse"
+  },
   "COUNTRY": {
     "Bangladesh": "Bangladesh",
     "Belgium": "Belgique",

@@ -2,11 +2,14 @@
 
 <div class="text-center mt-3">
   <img [src]="currentCountry.flag"
-       class="flag">
+       class="flag"
+       alt="flag">
 </div>
 
-<input matInput>
-<button (click)="next()"
-     class="btn">
-  SUIVANT
-</button>
+<div class="text-center m-3">
+  <input class="w-25"
+         [placeholder]="'FLAG_GAME.INPUT_LABEL' | translate"
+         [(ngModel)]="answer"
+         (keyup)="nextFlag()">
+</div>
+
