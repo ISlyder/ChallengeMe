@@ -1,1 +1,12 @@
+<p class="text-center mt-3">{{'COMMON.CHALLENGE_DESCRIPTION' | translate}}</p>
 
+<div class="text-center mt-3">
+  <img [src]="currentCountry.flag"
+       class="flag">
+</div>
+
+<input matInput>
+<button (click)="next()"
+     class="btn">
+  SUIVANT
+</button>

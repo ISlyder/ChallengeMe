@@ -4,7 +4,8 @@
     "FLAGS_DESCRIPTION": "Apprends tous ces drapeaux et ose me challenger !",
     "TRAINING": "Entrainement",
     "TRAINING_DESCRIPTION": "Passe ta souris sur un drapeau pour découvrir le pays !",
-    "FLAG_GAME": "Challenge"
+    "FLAG_GAME": "Challenge",
+    "CHALLENGE_DESCRIPTION": "Tape le nom du drapeau dans le champs ci-dessous 😍"
   },
   "COUNTRY": {
     "Bangladesh": "Bangladesh",

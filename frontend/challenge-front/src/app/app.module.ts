@@ -15,6 +15,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {FlagTrainingComponent} from './flag-training/flag-training.component';
 import { FlagComponent } from './flag/flag.component';
 import { FlagGameComponent } from './flag-game/flag-game.component';
+import {MatInputModule} from '@angular/material/input';
 
 export  function  HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -38,12 +39,13 @@ export  function  HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
         HttpClientModule,
         AppRoutingModule,
         TranslateModule.forRoot({
-          loader: {
-            provide:  TranslateLoader,
-            useFactory:  HttpLoaderFactory,
-            deps: [HttpClient]
-          }
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
         }),
+        MatInputModule,
     ],
   providers: [],
   bootstrap: [AppComponent],
