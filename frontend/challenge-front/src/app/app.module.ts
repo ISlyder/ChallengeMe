@@ -9,13 +9,16 @@ import { NotfoundComponent } from './utils/notfound/notfound.component';
 import { FlagPageComponent } from './flag-page/flag-page.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {FlagTrainingComponent} from './flag-training/flag-training.component';
 import { FlagComponent } from './flag/flag.component';
 import { FlagGameComponent } from './flag-game/flag-game.component';
 import {MatInputModule} from '@angular/material/input';
+import { StartGameComponent } from './flag-game/start-game/start-game.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 export  function  HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -30,7 +33,8 @@ export  function  HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     FlagPageComponent,
     FlagTrainingComponent,
     FlagComponent,
-    FlagGameComponent
+    FlagGameComponent,
+    StartGameComponent
   ],
     imports: [
         BrowserModule,
@@ -46,6 +50,9 @@ export  function  HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
             }
         }),
         MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        ReactiveFormsModule,
     ],
   providers: [],
   bootstrap: [AppComponent],

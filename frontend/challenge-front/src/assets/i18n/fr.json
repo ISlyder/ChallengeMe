@@ -5,7 +5,10 @@
     "TRAINING": "Entrainement",
     "TRAINING_DESCRIPTION": "Passe ta souris sur un drapeau pour découvrir le pays !",
     "FLAG_GAME": "Challenge",
-    "CHALLENGE_DESCRIPTION": "Tape le nom du drapeau dans le champs ci-dessous 😍"
+    "CHALLENGE_DESCRIPTION": "Tape le nom du drapeau dans le champs ci-dessous 😍",
+    "PSEUDO" : "Ton pseudo",
+    "START_DESCRIPTION": "Tu es prêt à relever le défi ?",
+    "START": "Commencez"
   },
   "FLAG_GAME": {
     "INPUT_LABEL": "Ta réponse"

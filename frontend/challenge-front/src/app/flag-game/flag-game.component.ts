@@ -15,6 +15,7 @@ export class FlagGameComponent implements OnInit {
   currentCountry: Country;
   victory: boolean;
   answer = '';
+  counter: number;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,18 +31,32 @@ export class FlagGameComponent implements OnInit {
       });
     this.victory = false;
     this.currentCountry = this.sortedArray[0];
+    this.counter = 0;
   }
 
   nextFlag(): void {
     const translatedCountryName: string = this.translate.instant(`COUNTRY.${this.currentCountry.name}`);
-    if (this.sortedArray.length > 0
-      && !this.victory
-      && this.answer.toLowerCase() === translatedCountryName.toLowerCase()) {
+    if (this.isAnswerCorrect(translatedCountryName)) {
       this.sortedArray.shift();
       this.currentCountry = this.sortedArray[0];
       this.answer = '';
-    } else if (this.sortedArray.length === 0) {
+      this.counter++;
+    } else if (this.sortedArray && this.sortedArray.length === 0) {
       this.victory = true;
     }
+  }
+
+  skip(): void {
+    if (this.sortedArray) {
+      this.sortedArray.sort(() => Math.random() > .5 ? 1 : -1);
+      this.currentCountry = this.sortedArray[0];
+    }
+  }
+
+  isAnswerCorrect(name: string): boolean {
+    return this.sortedArray
+      && this.sortedArray.length > 0
+      && !this.victory
+      && this.answer.toLowerCase() === name.toLowerCase();
   }
 }

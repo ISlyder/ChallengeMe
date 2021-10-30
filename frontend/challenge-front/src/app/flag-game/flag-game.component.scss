@@ -1,4 +1,14 @@
+.flag-container {
+  position: relative;
+}
+
 .flag {
-  width: 25%;
-  height: 10%
+  width: 600px;
+  height: 100%;
+}
+
+.btn-skip {
+  position: absolute;
+  right: -120px;
+  width: 100px;
 }
